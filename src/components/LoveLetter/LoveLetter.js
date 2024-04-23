@@ -11,7 +11,7 @@ const LoveLetter = () => {
     Never before have I felt such joy as when I am with you, my love.\n\
     My dearest, you are the most wonderful person I have ever known, and I am endlessly thankful for your love.\n\n\
     With love,\n\
-    Saiiiiiiiii`);
+    naviiin😉`);
 
   const audioRef = useRef(null);
 
@@ -64,7 +64,7 @@ const LoveLetter = () => {
         <button className="share-button" onClick={handleShare}>Share</button>
       )}
       {isRead && (
-        <div className="read-confirmation">You have read the letter.</div>
+        <div className="read-confirmation">Open Here</div>
       )}
     </div>
   );
