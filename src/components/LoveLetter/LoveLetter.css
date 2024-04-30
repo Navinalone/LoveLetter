@@ -2,13 +2,14 @@
 
 .envelope {
   position: relative;
-  width: 600px;
-  height: 400px;
+  width: 800px; /* Increased width for a larger envelope */
+  height: 600px; /* Increased height for a larger envelope */
   margin: 50px auto;
   cursor: pointer;
   perspective: 1000px;
-  background: url('https://static.vecteezy.com/system/resources/previews/010/029/965/non_2x/love-letter-pattern-texture-with-text-effect-on-a-white-background-valentine-s-day-special-seamless-pattern-design-with-love-shapes-love-endless-pattern-decoration-for-bed-sheets-and-wallpapers-vector.jpg');
-  border-radius: 8px;
+  background: url('./love.jpg') no-repeat center center; /* Set background to cover entire container */
+  background-size: cover; /* Ensure the background covers the entire container */
+  border-radius: 20px; /* Increased border radius for a larger envelope */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.6s ease;
 }
@@ -17,40 +18,45 @@
   position: absolute;
   width: 100%;
   height: 50%;
-  background: url('https://static.vecteezy.com/system/resources/previews/010/029/965/non_2x/love-letter-pattern-texture-with-text-effect-on-a-white-background-valentine-s-day-special-seamless-pattern-design-with-love-shapes-love-endless-pattern-decoration-for-bed-sheets-and-wallpapers-vector.jpg');
+  background: transparent; /* Set flap background to transparent */
   transform-origin: bottom;
   transition: transform 0.8s ease;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 20px; /* Increased border radius for a larger envelope */
+  border-top-right-radius: 20px; /* Increased border radius for a larger envelope */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .body {
   position: absolute;
   top: 50%;
-  width: 100%;
-  height: 50%;
-  background: url('https://static.vecteezy.com/system/resources/previews/010/029/965/non_2x/love-letter-pattern-texture-with-text-effect-on-a-white-background-valentine-s-day-special-seamless-pattern-design-with-love-shapes-love-endless-pattern-decoration-for-bed-sheets-and-wallpapers-vector.jpg');
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  z-index: -1;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the body horizontally and vertically */
+  width: 80%; /* Adjust the width as needed */
+  height: 70%; /* Adjust the height as needed */
+  background-color: transparent; /* Set background color to transparent */
+  border-radius: 10px; /* Adjust border radius as needed */
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  z-index: 1; /* Ensure the message appears above the flap */
+  overflow-y: auto; /* Enable scrolling if needed */
 }
+
 
 .letter-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto; /* Enable scrolling */
+  top: 50%; /* Place the container 50% from the top */
+  left: 50%; /* Place the container 50% from the left */
+  transform: translate(-50%, -50%); /* Center the container horizontally and vertically */
+  width: 80%; /* Adjust the width as needed */
+  height: 70%; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable scrolling if needed */
 }
 
 .letter {
-  background-color: #fafafa;
+  background: url('./love.jpg') no-repeat center center; /* Set background to cover entire container */
+  background-size: cover; /* Ensure the background covers the entire container */
   overflow: hidden;
   transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transform-origin: bottom;
   opacity: 0;
   font-family: "Sedan", serif;
   font-weight: 400;
